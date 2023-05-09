@@ -1,5 +1,5 @@
 {
-  "name": "async-error-handler",
+  "name": "asynchronous-error-handler",
   "version": "1.0.0",
   "description": "This package contains a function called \"asyncHandler\" which is designed to simplify the error-handling process when working with asynchronous functions that may throw errors. Instead of having to write a try-catch block around every async function call, you can use \"asyncHandler\" to catch any errors that occur in the callback function and handle them in a centralized location.",
   "main": "src/index.js",

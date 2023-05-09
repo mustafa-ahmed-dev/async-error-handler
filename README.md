@@ -6,56 +6,6 @@ The "asyncHandler" takes a callback, so you don't have to call the async functio
 
 Instead of catching errors in the this way, which you always have to write the try-catch block. You can can have the "asyncHandler" catch them for you and you only have to handle the errors
 
-## JavaScript
-
-Not using "asynchronous-error-handler" package
-
-```javascript
-const fs = require("fs");
-const path = require("path");
-
-async function readFile(path, encoding) {
-  try {
-    const data = await fs.promises.readFile(path, encoding);
-
-    return data;
-  } catch (error) {
-    consol.error(error);
-  }
-}
-
-(async () => {
-  const data = await readFile(path.join(__dirname, "test.txt"), "utf-8");
-  console.log(data);
-})();
-```
-
-Using "asynchronous-error-handler" package
-
-```javascript
-const fs = require("fs");
-const path = require("path");
-
-async function readFile(path, encoding) {
-  const [data, error] = await asyncHandler(
-    fs.promises.readFile,
-    path,
-    encoding
-  );
-
-  if (error) return console.error(error);
-
-  return data;
-}
-
-(async () => {
-  const data = await readFile(path.join(__dirname, "test.txt"), "utf-8");
-  console.log(data);
-})();
-```
-
-## TypeScript
-
 Not using "asynchronous-error-handler" package
 
 ```typescript
