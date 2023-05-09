@@ -1,0 +1,26 @@
+{
+  "name": "async-error-handler",
+  "version": "1.0.0",
+  "description": "Handles asynchronous events and promises",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mustafa-ahmed-dev/async-error-handler.git"
+  },
+  "author": "Mustafa Ahmed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mustafa-ahmed-dev/async-error-handler/issues"
+  },
+  "homepage": "https://github.com/mustafa-ahmed-dev/async-error-handler#readme",
+  "keywords": [
+    "async",
+    "asynchronous",
+    "asynchronous-errors",
+    "error",
+    "error-handling"
+  ]
+}
