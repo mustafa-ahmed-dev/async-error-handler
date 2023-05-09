@@ -32,8 +32,7 @@ You can can have the "asyncHandler" catch them for you and you only have to hand
 ```typescript
 import fs, { EncodingOption } from "fs";
 import path from "path"
-
-import asyncHandler from "./src";
+import asyncHandler from "asynchronous-error-handler";
 import { ReadFileError } from "what-ever-error-handling-package";
 
 async function readFile(path: string, encoding: EncodingOption) {
