@@ -1,12 +1,12 @@
-async function asyncHandler<T>(
-  callback: (...args: any[]) => Promise<T>,
-  ...args: any[]
+async function asyncHandler<T extends any[], U>(
+  callback: (...args: T) => Promise<U>,
+  ...args: Parameters<(...args: T) => Promise<U>>
 ) {
   try {
     const data = await callback(...args);
-    return [data, undefined];
+    return [data, undefined] as const;
   } catch (error) {
-    return [undefined, error];
+    return [undefined, error] as const;
   }
 }
 
